@@ -1,0 +1,7 @@
+{
+  "name": "react-nested-tab-nav",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
