@@ -1,9 +1,11 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Tab2.css';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, useIonViewWillEnter, useIonViewWillLeave, IonButton } from '@ionic/react';
 
 const Tab2: React.FC = () => {
+
+  useIonViewWillEnter(() => console.log('ionViewWillEnter: Tab2'));
+  useIonViewWillLeave(() => console.log('ionViewWillLeave: Tab2'));
+
   return (
     <IonPage>
       <IonHeader>
@@ -17,7 +19,7 @@ const Tab2: React.FC = () => {
             <IonTitle size="large">Tab 2</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 2 page" />
+        <IonButton routerLink="/home/tabs-sibling-root">Visit the tab sibling root</IonButton>
       </IonContent>
     </IonPage>
   );
